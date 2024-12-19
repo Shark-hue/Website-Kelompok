@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #007bff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #007bff;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  margin: 0;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+.navbar .toggle-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  background: url('https://i.pinimg.com/736x/48/7d/42/487d429df70168d1e3cb0da51a1e1baa.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 100px 5px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  height: 400px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(8px);
+  z-index: -1;
+}
+
+header h1 {
+  font-size: 5rem;
+  margin-bottom: 15px;
+  color: #e5e6e3;
+}
+
+/* About Section */
+section {
+  padding: 50px 20px;
+  background: #fff;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Team Section */
+.team .members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.member {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.member h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.member .role {
+  color: #007bff;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.member .preview-info {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.member .expand-btn {
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 15px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.member .expand-btn:hover {
+  background: #f0f7ff;
+}
+
+.member .details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  margin-top: 0;
+}
+
+.member .details.expanded {
+  max-height: 600px;
+  margin-top: 15px;
+}
+
+.member .details-content {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+.member .details-content p {
+  text-align: justify;
+  text-indent: 1em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.member .details h3 {
+  color: #007bff;
+  font-size: 1.1rem;
+  margin: 15px 0 10px 0;
+  text-align: left;
+}
+
+.member .details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.member .details li {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #007bff;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .toggle-menu {
+    display: block;
+  }
+}

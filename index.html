@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kolaborasi Kelompok</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <button class="toggle-menu" onclick="toggleNavbar()">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#team-pembuat-web">Kelompok Pembuat Web</a></li>
+        <li><a href="#team-reviewer-web">Kelompok Reviewer Web</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 data-aos="fade-down">Kolaborasi Kelompok 5 dan 6</h1>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 data-aos="fade-right">Tentang Website</h2>
+    <p data-aos="fade-left">.</p>
+  </section>
+
+  <!-- Team Pembuat Web Section -->
+  <section id="team-pembuat-web">
+    <h2 data-aos="zoom-in">Kelompok Pembuat Web</h2>
+    <div class="team">
+      <div class="members">
+        <!-- Member details will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Reviewer Web Section -->
+  <section id="team-reviewer-web">
+    <h2 data-aos="zoom-in">Kelompok Reviewer Web</h2>
+    <div class="team">
+      <div class="members">
+        <!-- Member details will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Team website & Reviewer Web. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- Custom Scripts -->
+  <script src="members.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

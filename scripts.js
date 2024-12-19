@@ -1,0 +1,71 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  // Navbar Toggle
+  const toggleMenu = document.querySelector('.toggle-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggleMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Render Team Members
+  function renderTeamMembers(teamData, containerId) {
+    const container = document.querySelector(`#${containerId} .members`);
+    container.innerHTML = '';
+    
+    teamData.forEach(member => {
+      const memberDiv = document.createElement('div');
+      memberDiv.classList.add('member');
+      memberDiv.dataset.aos = 'zoom-in';
+      
+      memberDiv.innerHTML = `
+        <img src="${member.image || 'foto3.jpg'}" alt="${member.name}">
+        <h4>${member.name}</h4>
+        <p class="role">${member.role}</p>
+        <p class="preview-info">${member.description.slice(0, 100)}...</p>
+        <button class="expand-btn">Lihat Selengkapnya</button>
+        <div class="details">
+          <div class="details-content">
+            <h3>Deskripsi</h3>
+            <p>${member.description}</p>
+            
+            <h3>Keahlian</h3>
+            <ul>
+              ${member.skills.map(skill => `<li>${skill}</li>`).join('')}
+            </ul>
+            
+            <h3>Proyek</h3>
+            <ul>
+              ${member.projects.map(project => `<li>${project}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+
+      // Add click handler for expand/collapse
+      const expandBtn = memberDiv.querySelector('.expand-btn');
+      const details = memberDiv.querySelector('.details');
+      
+      expandBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        details.classList.toggle('expanded');
+        expandBtn.textContent = details.classList.contains('expanded') ? 
+          'Tutup' : 'Lihat Selengkapnya';
+      });
+
+      container.appendChild(memberDiv);
+    });
+  }
+
+  // Update About section and render teams
+  const aboutSection = document.querySelector('#about p');
+  aboutSection.textContent = `Website ini dibuat oleh dua kelompok yang berkolaborasi. Kelompok pertama terdiri dari ${teamPembuatWeb.length} anggota yang bertugas membuat website, sedangkan kelompok kedua terdiri dari ${teamReviewerWeb.length} anggota untuk me=review hasil dari pembuatan website ini dan memastikan tidak ada bug, serta website ini adalah sebagai salah satu syarat tugas akhir dari mata kuliah Interaksi Manusia Dan Komputer.`;
+  
+  renderTeamMembers(teamPembuatWeb, 'team-pembuat-web');
+  renderTeamMembers(teamReviewerWeb, 'team-reviewer-web');
+});
