@@ -3,15 +3,15 @@ const teamPembuatWeb = [
     name: 'Akbar Pandu Ardiantama',
     role: 'Frontend Developer',
     description: 'hallo saya adalah mahasiswa uniska semester 5. di sini saya sebagai Frontend Devoloper, sedikit tentang saya. saya memiliki hobi badminton. Olahraga ini bukan sekadar hobi bagi saya, tapi juga menjadi cara untuk menjaga kebugaran dan menyeimbangkan aktivitas akademik dengan kegiatan fisik yang menyenangkan.',
-    skills: ['HTML', 'CSS', 'JavaScript basic'],
+    skills: ['HTML', 'CSS', 'JavaScript basic', 'Python'],
     projects: ['Kelompok dan Personal Portfolio'],
     image: 'assets/foto1.jpg' // Tambahkan foto sesuai file
   },
   {
     name: 'Angga Ali Pradana',
     role: 'Backend Developer',
-    description: 'Spesialis backend dengan pengalaman dalam merancang arsitektur sistem yang scalable.',
-    skills: ['Node.js', 'Express', 'MongoDB', 'Python'],
+    description: 'Saya seorang mahasiswa di Universitas Islam Kadiri prodi Teknik Komputer. Disini saya sebagai Backend Developer, hobi saya adalah seni atau membuat sebuah karya, Disisi lain saya juga suka menulis dan membaca, karena dengan seperti itu bisa menambah wawasan untuk diri kita.',
+    skills: ['JavaScript', 'PHP', 'SQL', 'Python'],
     projects: ['Sistem Manajemen Inventaris', 'API untuk Aplikasi Mobile'],
     image: 'assets/foto2.jpg'
   },
