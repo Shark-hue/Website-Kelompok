@@ -1,4 +1,45 @@
+// Theme functionality
+function toggleTheme() {
+  const html = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeIcon = themeToggle.querySelector('i');
+  const themeText = themeToggle.querySelector('span');
+  
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.setAttribute('data-theme', 'light');
+    themeIcon.className = 'fas fa-moon';
+    themeText.textContent = 'Dark Mode';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    themeIcon.className = 'fas fa-sun';
+    themeText.textContent = 'Light Mode';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Initialize theme from localStorage
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  const html = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeIcon = themeToggle.querySelector('i');
+  const themeText = themeToggle.querySelector('span');
+
+  html.setAttribute('data-theme', savedTheme);
+  if (savedTheme === 'dark') {
+    themeIcon.className = 'fas fa-sun';
+    themeText.textContent = 'Light Mode';
+  } else {
+    themeIcon.className = 'fas fa-moon';
+    themeText.textContent = 'Dark Mode';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize theme
+  initializeTheme();
+  
   // Initialize AOS
   AOS.init({
     duration: 1000,
@@ -13,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('active');
   });
 
+
+  
   // Render Team Members
   function renderTeamMembers(teamData, containerId) {
     const container = document.querySelector(`#${containerId} .members`);
