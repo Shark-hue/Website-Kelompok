@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Update About section and render teams
   const aboutSection = document.querySelector('#about p');
-  aboutSection.textContent = `Website ini dibuat oleh dua kelompok yang berkolaborasi. Kelompok pertama terdiri dari ${teamPembuatWeb.length} anggota yang bertugas membuat website, sedangkan kelompok kedua terdiri dari ${teamReviewerWeb.length} anggota untuk me=review hasil dari pembuatan website ini dan memastikan tidak ada bug, serta website ini adalah sebagai salah satu syarat tugas akhir dari mata kuliah Interaksi Manusia Dan Komputer.`;
+  aboutSection.textContent = `Website ini dibuat oleh dua kelompok yang berkolaborasi. Kelompok pertama terdiri dari ${teamPembuatWeb.length} anggota yang bertugas membuat website, sedangkan kelompok kedua terdiri dari ${teamReviewerWeb.length} anggota untuk me-review hasil dari pembuatan website ini dan memastikan tidak ada bug, serta website ini adalah sebagai salah satu syarat tugas akhir dari mata kuliah Interaksi Manusia Dan Komputer.`;
   
   renderTeamMembers(teamPembuatWeb, 'team-pembuat-web');
   renderTeamMembers(teamReviewerWeb, 'team-reviewer-web');
