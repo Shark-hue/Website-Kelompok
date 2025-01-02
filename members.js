@@ -5,12 +5,12 @@ const teamPembuatWeb = [
     description: 'hallo saya adalah mahasiswa uniska semester 5. di sini saya sebagai Frontend Devoloper, sedikit tentang saya. saya memiliki hobi badminton. Olahraga ini bukan sekadar hobi bagi saya, tapi juga menjadi cara untuk menjaga kebugaran dan menyeimbangkan aktivitas akademik dengan kegiatan fisik yang menyenangkan.',
     skills: ['HTML', 'CSS', 'JavaScript basic', 'Python'],
     projects: ['Kelompok dan Personal Portfolio'],
-    image: 'assets/foto1.jpg' // Tambahkan foto sesuai file
+    image: 'assets/foto1.jpg' 
   },
   {
     name: 'Angga Ali Pradana',
     role: 'Backend Developer',
-    description: 'Saya seorang mahasiswa di Universitas Islam Kadiri prodi Teknik Komputer. Disini saya sebagai Backend Developer, hobi saya adalah seni atau membuat sebuah karya, Disisi lain saya juga suka menulis dan membaca, karena dengan seperti itu bisa menambah wawasan untuk diri kita.',
+    description: 'Saya seorang mahasiswa di Universitas Islam Kadiri prodi Teknik Komputer. Disini saya sebagai Backend Developer, hobi saya adalah seni atau membuat sebuah karya, Disisi lain saya juga suka editing, menulis, dan membaca, karena dengan seperti itu kita bisa menambah skill maupun wawasan untuk diri kita.',
     skills: ['JavaScript', 'PHP', 'SQL', 'Python'],
     projects: ['Sistem Manajemen Inventaris', 'API untuk Aplikasi Mobile'],
     image: 'assets/foto2.jpg'
