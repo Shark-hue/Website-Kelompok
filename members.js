@@ -18,9 +18,9 @@ const teamPembuatWeb = [
   {
     name: 'Fahry Satria Putra Pratama',
     role: 'UI/UX Designer',
-    description: 'Desainer berpengalaman yang fokus pada menciptakan pengalaman pengguna yang intuitif.',
-    skills: ['Figma', 'Adobe XD', 'Sketch', 'Wireframing'],
-    projects: ['Desain Aplikasi Kesehatan', 'Redesign Website Perusahaan'],
+    description: 'hallo saya Fahry mahasiswa UNISKA semester 5. Di sini saya sebagai Mockup & UI Designers. Saya memiliki hobi dalam mencari dan mencoba hal baru, tetapi saya menganggap bukan sekedar hobby melainkan untuk menambah wawasan dan value untuk diri saya sendiri.',
+    skills: ['HTML', 'JavaScript Basic', 'Construck', 'Adobe Premiere'],
+    projects: ['Kelompok dan Personal Portofolio'],
     image: 'assets/foto3.jpg'
   }
 ];
